@@ -1,2 +1,2 @@
-# Amazon-DynamoDB---The-Definitive-Guide
-Amazon DynamoDB - The Definitive Guide, Published by Packt
+# The-Definitive-Guide-to-Amazon-DynamoDB
+The Definitive Guide to Amazon DynamoDB, Published by Packt

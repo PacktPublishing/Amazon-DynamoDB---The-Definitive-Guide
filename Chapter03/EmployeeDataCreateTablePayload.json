@@ -1,0 +1,100 @@
+{
+  "AttributeDefinitions": [
+    {
+      "AttributeName": "Designation",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "FirstName",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "LastName",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "LoginAlias",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "ManagerLoginAlias",
+      "AttributeType": "S"
+    }
+  ],
+  "TableName": "Employee",
+  "KeySchema": [
+    {
+      "AttributeName": "LoginAlias",
+      "KeyType": "HASH"
+    }
+  ],
+  "GlobalSecondaryIndexes": [
+    {
+      "IndexName": "DesignationIndex",
+      "KeySchema": [
+        {
+          "AttributeName": "Designation",
+          "KeyType": "HASH"
+        },
+        {
+          "AttributeName": "LoginAlias",
+          "KeyType": "RANGE"
+        }
+      ],
+      "Projection": {
+        "ProjectionType": "ALL"
+      },
+      "ProvisionedThroughput": {
+        "ReadCapacityUnits": 1,
+        "WriteCapacityUnits": 1
+      }
+    },
+    {
+      "IndexName": "DirectReports",
+      "KeySchema": [
+        {
+          "AttributeName": "ManagerLoginAlias",
+          "KeyType": "HASH"
+        }
+      ],
+      "Projection": {
+        "ProjectionType": "INCLUDE",
+        "NonKeyAttributes": [
+          "FirstName",
+          "LastName",
+          "LoginAlias"
+        ]
+      },
+      "ProvisionedThroughput": {
+        "ReadCapacityUnits": 1,
+        "WriteCapacityUnits": 1
+      }
+    },
+    {
+      "IndexName": "Name",
+      "KeySchema": [
+        {
+          "AttributeName": "FirstName",
+          "KeyType": "HASH"
+        },
+        {
+          "AttributeName": "LastName",
+          "KeyType": "RANGE"
+        }
+      ],
+      "Projection": {
+        "ProjectionType": "ALL"
+      },
+      "ProvisionedThroughput": {
+        "ReadCapacityUnits": 1,
+        "WriteCapacityUnits": 1
+      }
+    }
+  ],
+  "BillingMode": "PROVISIONED",
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 1,
+    "WriteCapacityUnits": 1
+  },
+  "TableClass": "STANDARD"
+}

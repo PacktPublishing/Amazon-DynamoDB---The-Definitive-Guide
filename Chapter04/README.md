@@ -19,11 +19,11 @@
 
 #### `GetItem` example using the AWS CLI
 ```shell
-aws dynamodb get-item \ 
---table-name Employee \ 
---key '{"LoginAlias": {"S": "janed"}}' \ 
---endpoint https://dynamodb.eu-west-2.amazonaws.com \ 
---region eu-west-2
+aws dynamodb get-item \
+    --table-name "Employee" \
+    --key '{"LoginAlias":{"S":"janed"}}' \
+    --endpoint "https://dynamodb.eu-west-2.amazonaws.com" \
+    --region "eu-west-2"
 ```
 
 #### `GetItem` example using the AWS SDK for Python (Boto3)
@@ -70,6 +70,8 @@ print(response['Items'])
 
 #### `PutItem` example using the AWS CLI
 ```shell
+# If you do not have the `definitive-guide` profile created in your local machine,
+# you can skip --profile defintive-guide AND remove the forward slash after eu-west-2
 aws dynamodb put-item \
     --table-name Employee \
     --item '{

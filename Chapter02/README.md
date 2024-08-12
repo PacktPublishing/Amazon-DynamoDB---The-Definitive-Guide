@@ -25,8 +25,8 @@ pip install boto3
 ```python
 import boto3
 
-# Initialize a DynamoDB resource
-dynamodb = boto3.resource('dynamodb')  
+# Initialize a DynamoDB client for the specified region
+dynamodb = boto3.resource('dynamodb', region_name='eu-west-2')  
 
 # Specify the table
 table = dynamodb.Table('DefinitiveGuide01')  
@@ -46,8 +46,8 @@ print(items)
 ```python
 import boto3  
 
-# Initialize a DynamoDB resource
-dynamodb = boto3.resource('dynamodb')  
+# Initialize a DynamoDB client for the specified region
+dynamodb = boto3.resource('dynamodb', region_name='eu-west-2')  
 
 # Specify the table
 table = dynamodb.Table('DefinitiveGuide01')  
@@ -72,8 +72,8 @@ print(items)
 ```python
 import boto3  
 
-# Initialize a DynamoDB resource
-dynamodb = boto3.resource('dynamodb')  
+# Initialize a DynamoDB client for the specified region
+dynamodb = boto3.resource('dynamodb', region_name='eu-west-2')  
 
 # Specify the table
 table = dynamodb.Table('DefinitiveGuide01')
@@ -99,8 +99,8 @@ print(items)
 ```python
 import boto3
 
-# Initialize a DynamoDB resource
-dynamodb = boto3.resource('dynamodb')  
+# Initialize a DynamoDB client for the specified region
+dynamodb = boto3.resource('dynamodb', region_name='eu-west-2')
 
 # Specify the table
 table = dynamodb.Table('DefinitiveGuide01')
@@ -125,8 +125,8 @@ def lambda_handler(event, context):
 ```python
 import boto3
 
-# Initialize a DynamoDB resource
-dynamodb = boto3.resource('dynamodb')  
+# Initialize a DynamoDB client for the specified region
+dynamodb = boto3.resource('dynamodb', region_name='eu-west-2') 
 
 # Specify the table
 table = dynamodb.Table('DefinitiveGuide01')
@@ -158,7 +158,7 @@ import boto3
 # Initialize a DynamoDB resource with a specified endpoint URL
 dynamodb = boto3.resource(
     'dynamodb',
-    endpoint_url='https://localhost:8000'
+    endpoint_url='http://localhost:8000'
 )
 ```
 

@@ -6,18 +6,20 @@
 
 #### `Query` using AWS CLI on London (eu-west-2) replica
 ```shell
+# Install jq from https://jqlang.github.io/jq/download/
 aws dynamodb query \
-    --table-name Employee \ 
+    --table-name Employee \
     --key-condition-expression "LoginAlias = :pk_val" \
-    --expression-attribute-values '{":pk_val": {"S": "amdhing"}}' \ 
+    --expression-attribute-values '{":pk_val": {"S": "amdhing"}}' \
     --region eu-west-2 | jq -rc
 ```
 
 #### `Query` using AWS CLI on Singapore (ap-southeast-1) replica
 ```shell
-aws dynamodb query \ 
+# Install jq from https://jqlang.github.io/jq/download/
+aws dynamodb query \
     --table-name Employee \
-    --key-condition-expression "LoginAlias = :pk_val" \ 
-    --expression-attribute-values '{":pk_val": {"S": "amdhing"}}' \ 
+    --key-condition-expression "LoginAlias = :pk_val" \
+    --expression-attribute-values '{":pk_val": {"S": "amdhing"}}' \
     --region ap-southeast-1 | jq -rc
 ```

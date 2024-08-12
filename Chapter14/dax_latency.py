@@ -48,7 +48,7 @@ ddb_client = boto3.client(
 # Set up the DAX client
 logger.info("Setting up DAX Client")
 dynamodb_dax = AmazonDaxClient(
-    endpoint_url='daxs://chapter16.ncsi8a.dax-clusters.eu-west-2.amazonaws.com',
+    endpoint_url='daxs://xxxx.yyyy.dax-clusters.eu-west-2.amazonaws.com',
     region_name='eu-west-2',
     config=my_config
 )

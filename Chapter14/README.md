@@ -71,7 +71,7 @@ my_config = Config(
 
 # DynamoDB.Table resource for making batch writes
 dynamodb = boto3.resource('dynamodb', region_name='eu-west-2', config=my_config)
-table = dynamodb.Table('chapter16')
+table = dynamodb.Table('chapter14')
 
 # DynamoDB.Client for making reads from DynamoDB
 ddb_client = boto3.client('dynamodb', region_name='eu-west-2', config=my_config)
@@ -129,7 +129,7 @@ def get_items(client, thread_index, latencies, op_count_list):
         for i in range(100):
             try:
                 key = {'PK': {'S': 'employee{}'.format(random.randint(0, 9999))}}
-                response = client.get_item(TableName='chapter16', Key=key)
+                response = client.get_item(TableName='chapter14', Key=key)
                 op_count += 1
             except Exception as e:
                 print(e, file=sys.stderr)

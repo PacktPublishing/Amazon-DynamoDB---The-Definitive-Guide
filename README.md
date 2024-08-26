@@ -1,55 +1,75 @@
 # Amazon DynamoDB - The Definitive Guide
-Amazon DynamoDB - The Definitive Guide, Published by Packt
 
-## What this book covers 
+<a href="https://www.packtpub.com/en-in/product/amazon-dynamodb-the-definitive-guide-9781803246895"><img src="https://content.packt.com/_/image/original/B18220/cover_image_large.jpg" alt="no-image" height="256px" align="right"></a>
 
-**Chapter 1, Amazon DynamoDB in Action** explores DynamoDB's market position, evolution, real-world use cases, and suitability for various workloads. It prepares readers with the background and tools to start using DynamoDB effectively. 
+This is the code repository for [Amazon DynamoDB - The Definitive Guide](https://www.packtpub.com/en-in/product/amazon-dynamodb-the-definitive-guide-9781803246895), published by Packt.
 
-**Chapter 2, The AWS Management Console, and SDKs**, builds on Chapter 1 by introducing working with DynamoDB via the AWS Management Console, exploring layout and options without programming. It covers AWS SDKs for API interaction, running code with AWS Lambda, and using DynamoDB Local for offline development. 
+**Explore enterprise-ready, serverless NoSQL with predictable, scalable performance**
 
-**Chapter 3, NoSQL Workbench for DynamoDB**, covers the cross-platform tool for designing and managing NoSQL databases. It includes setup, navigating the interface, and modifying data models, while reserving data modeling concepts for future chapters. 
+## What is this book about?
+This guide helps you master DynamoDB, the serverless NoSQL database built for high performance at any scale. Authored by AWS experts, it covers core features, data modeling, and advanced topics, enabling you to build state-of-the-art applications.
 
-**Chapter 4, Simple Key-Value**, is the first chapter focusing on data modeling. It introduces the key-value concept in DynamoDB, detailing how data is stored and retrieved efficiently. The chapter covers key-value mechanics, DynamoDB data types, and limitations, laying the groundwork for advanced NoSQL design. 
+This book covers the following exciting features:
+* Master key-value data modeling in DynamoDB for efficiency
+* Transition from RDBMSs to NoSQL with optimized strategies
+* Implement read consistency and ACID transactions effectively
+* Explore vertical partitioning for specific data access patterns
+* Optimize data retrieval using secondary indexes in DynamoDB
+* Manage capacity modes, backup strategies, and core components
+* Enhance DynamoDB with caching, analytics, and global tables
+* Evaluate and design your DynamoDB migration strategy
 
-**Chapter 5, Moving from a Relational Mindset** bridges DynamoDB data modeling with concepts from Relational Database Management Systems (RDBMS). It contrasts RDBMS normalization with NoSQL denormalization, emphasizing strategies like duplication for optimized compute and efficient data retrieval. The chapter explores when to use single versus multiple DynamoDB tables and discusses partitioning strategies and handling large objects (LOBs) in NoSQL. 
+If you feel this book is for you, get your [copy](https://www.amazon.com/Amazon-DynamoDB-enterprise-ready-predictable-performance/dp/1803246898/ref=tmm_pap_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.u6R_md3yfBlv4qVm0pZCSklhq93iFH7Og49G-RwHnnA.nJPvHWTdQ_jwdaKIl0ZzI3h-iR0b46kA6DhYmCi2G3Q&qid=1724651746&sr=8-1) today!
+<a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
+alt="https://www.packtpub.com/" border="5" /></a>
 
-**Chapter 6, Read Consistency, Operations, and Transactions**, explores DynamoDB's read consistency models, including eventually and strongly consistent reads. It covers read operations, details ACID-compliant transactions, and provides guidance on balancing performance with cost. 
+## Instructions and Navigations
+All of the code is organized into folders. For example, Chapter02.
 
-**Chapter 7, Vertical Partitioning**, explores this advanced data modeling technique through practical examples. It covers constructing read and write operations, understanding Item Collections, and evaluating the benefits and limitations of Vertical Partitioning, helping you implement it effectively for specific access patterns. This is likely the most interesting data modeling chapter in this book! 
+The code will look like the following:
+```
+import boto3
 
-**Chapter 8, Secondary Indexes**, explores how to use secondary indexes in DynamoDB to optimize data retrieval and organization. It covers creating and modeling local and global secondary indexes, handling diverse access patterns, and best practices for cost-effective indexing. 
+dynamodb = boto3.resource('dynamodb', region_name='eu-west-2')
+table = dynamodb.Table('DefinitiveGuide01')
+response = table.scan()
+items = response['Items']
 
-**Chapter 9, Capacity Modes and Table Classes**, covers DynamoDB's two capacity modes: provisioned and on-demand. Learn to calculate and provision capacity, use auto-scaling, optimize costs with capacity reservations, and select the right table class for your needs. 
+print(items)
+```
 
-**Chapter 10, Request Routers, Storage Nodes, and Other Core Components**, explores DynamoDB’s fundamental architecture. Understand how core components like Request Routers and Storage Nodes work together for efficient, reliable database performance and secure data storage. 
+**Following is what you need for this book:**
+This book is for software architects designing scalable systems, developers optimizing performance with DynamoDB, and engineering managers guiding decision-making. Data engineers will learn to integrate DynamoDB into workflows, while product owners will explore its innovative capabilities. DBAs transitioning to NoSQL will find valuable insights on DynamoDB and RDBMS integration. Basic knowledge of software engineering, Python, and cloud computing is helpful. Hands-on AWS or DynamoDB experience is beneficial but not required
 
-**Chapter 11, Backup, Restore, and More**, covers DynamoDB’s backup and restore features, including on-demand backups and point-in-time recovery (PITR). It also explores data export/import options to and from S3, along with best practices for optimizing and securing backups. 
+## To get the most out of this book
+We recommend reading AWS DynamoDB Developer Guide alongside this book to get a comprehensive
+view of the specifics. Given that technology evolves, some limits or feature supports may have been
+updated since the book was published. Note also that console screenshots may differ from the latest
+version, but features and functionalities remain consistent. For the latest details, always refer to the
+AWS documentation. This book complements the documentation by offering insights and best practices
+drawn from more than a decade of combined DynamoDB and NoSQL experience.
 
-**Chapter 12, Streams and TTL**, explores Change Data Capture (CDC) methods with DynamoDB Streams and Kinesis Data Streams, detailing stream records, consumers like AWS Lambda and KCL, and cost implications. It also covers DynamoDB Time to Live (TTL) for managing DynamoDB data storage automatically. 
+While trying out the code examples can enrich your understanding, it is not mandatory. Note that
+using AWS features may incur costs, typically between $2 and $5 if resources are utilized and deleted
+within the same hour, with costs potentially increasing if resources remain active longer.
 
-**Chapter 13, Global Tables**, explores the features and benefits of DynamoDB global tables, including data replication, conflict resolution, and use cases for building highly available, fault-tolerant applications. It provides guidance on operating, managing, and troubleshooting global tables effectively. 
+## Related products
+* Getting Started with DuckDB [[Packt]](https://www.packtpub.com/en-in/product/getting-started-with-duckdb-9781803241005?type=print) [[Amazon]](https://www.amazon.com/Getting-Started-DuckDB-practical-efficiently/dp/1803241004/ref=sr_1_1?dib=eyJ2IjoiMSJ9.miwSyh5Ydw3YOxl8R0qRXg.0MYjqb4kUPh-t3Xa6COS1esLTuP5Ffju5MGilppuxOc&dib_tag=se&keywords=Getting+Started+with+DuckDB&qid=1724652317&sr=8-1)
 
-**Chapter 14, DynamoDB Accelerator (DAX) and Caching with DynamoDB**, covers caching strategies and introduces DynamoDB Accelerator (DAX), which enhances performance by up to 10X. It includes setup, benefits, challenges, and comparisons with other caching alternatives. 
+* Database Design and Modeling with PostgreSQL and MySQL [[Packt]](https://www.packtpub.com/en-in/product/database-design-and-modeling-with-postgresql-and-mysql-9781803233475?type=print) [[Amazon]](https://www.amazon.com/Database-Design-Modeling-PostgreSQL-MySQL/dp/1803233478/ref=sr_1_1?crid=DPWQYWA5QFZS&dib=eyJ2IjoiMSJ9.3dy3kll2XVBj-yBgEQ3xUEI6Jtgg05VXasxeHef8qigpu2gC8RBfLV7YWrIGElHtpj0jtiolZhl67slOiIuRyXFIJjugFnZznS3fjTLavELKWNM4GLVLjoOovR0gzSPtCeoUWT6ZftUxGuxa-qpNrZ_ScMTUy5fEPKiVI6wbL7phLro2BGgp_8vtV7BrxBebUOvgru6G2Sa2FyULxk75ZYBQYtf552SR3UzHt5Ivd3U.T5xK8AqjWNbbYSWsEhJRAiF25-kX-aOMjIbv4hECsU8&dib_tag=se&keywords=Database+Design+and+Modeling+with+PostgreSQL+and+MySQL&qid=1724652418&sprefix=database+design+and+modeling+with+postgresql+and+mysql%2Caps%2C387&sr=8-1)
 
-**Chapter 15, Enhanced Analytical Patterns**, explores proven analytical patterns for DynamoDB data, including bulk processing and optimizations. It covers the need for analytics, best practices, and integrating services to build an effective data strategy. 
-
-**Chapter 16, Migrations**, provides guidance on transitioning to DynamoDB, covering signs that indicate migration needs, various migration strategies, and common challenges. Learn to identify when migration is needed and how to execute it effectively with practical advice and real-world examples. 
-
-## Contributors 
-
-### About the author(s) 
-
----
-**Aman Dhingra** is a Senior DynamoDB Specialist Solutions Architect at AWS, where he assists organizations in leveraging AWS to its fullest potential. He focuses on designing cost-efficient solutions and maximizing the agility and elasticity offered by the cloud and AWS. With a specialization in Amazon DynamoDB and NoSQL databases, Aman is also well-versed in AWS's big data suite of technologies, many of which are tightly integrated with open-source projects. Aman is Dublin, Ireland based. 
+## Get to Know the Authors
+**Aman Dhingra**
+ is a Senior DynamoDB Specialist Solutions Architect at AWS, where he assists organizations in leveraging AWS to its fullest potential. He focuses on designing cost-efficient solutions and maximizing the agility and elasticity offered by the cloud and AWS. With a specialization in Amazon DynamoDB and NoSQL databases, Aman is also well-versed in AWS's big data suite of technologies, many of which are tightly integrated with open-source projects. Aman is Dublin, Ireland based.
 
 https://www.linkedin.com/in/amdhing/ | https://x.com/amdhing  
 
-----
-
-**Mike Mackay** was a Senior NoSQL Specialist Solutions Architect at AWS, known as one of the early AWS Architects in Europe specializing in NoSQL technologies. Before AWS, he was Technical Director at Digital Annexe / Your Favourite Story and Head of Development for Outside Line. 
+**Mike Mackay**
+ was a Senior NoSQL Specialist Solutions Architect at AWS, known as one of the early AWS Architects in Europe specializing in NoSQL technologies. Before AWS, he was Technical Director at Digital Annexe / Your Favourite Story and Head of Development for Outside Line. 
 
 Mike's freelance work includes collaborations with Warner Brothers (UK), Heineken Music, and Alicia Keys. He has also written PHP tutorials for .net magazine and Linux Format. His projects with Outside Line featured prominent clients such as The Hoosiers, Oasis, and Paul McCartney. 
 
 Outside work, Mike loved to chat F1 and indulge in DJ. Mike was London/Essex based. 
 
-https://www.linkedin.com/in/mikemackay82/  | https://x.com/mikemackay  | https://www.aboutamazon.eu/news/working-at-amazon/a-second-chance-at-life  
+https://www.linkedin.com/in/mikemackay82/  | https://x.com/mikemackay  | https://www.aboutamazon.eu/news/working-at-amazon/a-second-chance-at-life 
+

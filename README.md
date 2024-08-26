@@ -39,7 +39,7 @@ print(items)
 ```
 
 **Following is what you need for this book:**
-This book is for software architects designing scalable systems, developers optimizing performance with DynamoDB, and engineering managers guiding decision-making. Data engineers will learn to integrate DynamoDB into workflows, while product owners will explore its innovative capabilities. DBAs transitioning to NoSQL will find valuable insights on DynamoDB and RDBMS integration. Basic knowledge of software engineering, Python, and cloud computing is helpful. Hands-on AWS or DynamoDB experience is beneficial but not required
+This book is for software architects designing scalable systems, developers optimizing performance with DynamoDB, and engineering managers guiding decision-making. Data engineers will learn to integrate DynamoDB into workflows, while product owners will explore its innovative capabilities. DBAs transitioning to NoSQL will find valuable insights on DynamoDB and RDBMS integration. Basic knowledge of software engineering, Python, and cloud computing is helpful. Hands-on AWS or DynamoDB experience is beneficial but not required.
 
 ## To get the most out of this book
 We recommend reading AWS DynamoDB Developer Guide alongside this book to get a comprehensive

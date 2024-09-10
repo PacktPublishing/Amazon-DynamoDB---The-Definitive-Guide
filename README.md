@@ -1,8 +1,8 @@
 # Amazon DynamoDB - The Definitive Guide
 
-<a href="https://www.packtpub.com/en-in/product/amazon-dynamodb-the-definitive-guide-9781803246895"><img src="https://content.packt.com/_/image/original/B18220/cover_image_large.jpg" alt="no-image" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/en-in/product/amazon-dynamodb-the-definitive-guide-9781803246895?type=print"><img src="https://content.packt.com/_/image/original/B18220/cover_image_large.jpg" alt="no-image" height="256px" align="right"></a>
 
-This is the code repository for [Amazon DynamoDB - The Definitive Guide](https://www.packtpub.com/en-in/product/amazon-dynamodb-the-definitive-guide-9781803246895), published by Packt.
+This is the code repository for [Amazon DynamoDB - The Definitive Guide](https://www.packtpub.com/en-in/product/amazon-dynamodb-the-definitive-guide-9781803246895?type=print), published by Packt.
 
 **Explore enterprise-ready, serverless NoSQL with predictable, scalable performance**
 

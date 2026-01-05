@@ -53,6 +53,12 @@ While trying out the code examples can enrich your understanding, it is not mand
 using AWS features may incur costs, typically between $2 and $5 if resources are utilized and deleted
 within the same hour, with costs potentially increasing if resources remain active longer.
 
+## Errata
+**Page 191(Paragraph 1):**
+<p>This also marks the end of Part 2, Core Data Modeling. The next part deals with under-the-hood information about how DynamoDB operates at the scale it does, and how it performs various functions in a distributed manner to provide blazing-fast data access and virtually unlimited scale while being highly available for its customers.</p>
+<p style="font-weight: bold;"><em>Should be</em></p>
+<p>With this knowledge, you are now better equipped to make informed decisions about cost optimization, scalability, and performance for your DynamoDB workloads.</p>
+
 ## Related products
 * Getting Started with DuckDB [[Packt]](https://www.packtpub.com/en-in/product/getting-started-with-duckdb-9781803241005?type=print) [[Amazon]](https://www.amazon.com/Getting-Started-DuckDB-practical-efficiently/dp/1803241004/ref=sr_1_1?dib=eyJ2IjoiMSJ9.miwSyh5Ydw3YOxl8R0qRXg.0MYjqb4kUPh-t3Xa6COS1esLTuP5Ffju5MGilppuxOc&dib_tag=se&keywords=Getting+Started+with+DuckDB&qid=1724652317&sr=8-1)
 
